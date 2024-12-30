@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             BooksSeeder::class,
-            RankingPostSeeder::class
+            RankingCategoriesSeeder::class,
+            RankInfoSeeder::class
         ]);
     }
 }

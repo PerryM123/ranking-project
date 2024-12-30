@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRankingPostsTable extends Migration
+class CreateRankingCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateRankingPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ranking_posts', function (Blueprint $table) {
+        Schema::create('ranking_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('author');
-            $table->json('ranking_info');
-            $table->timestamps();
+            // TODO: ranking_categories_id should be a NUMBER???
+            $table->unsignedBigInteger('ranking_categories_id');
+            $table->string('rank_title');
         });
     }
 
@@ -29,6 +28,6 @@ class CreateRankingPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ranking_posts');
+        Schema::dropIfExists('ranking_categories');
     }
 }

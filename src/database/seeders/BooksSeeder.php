@@ -15,7 +15,13 @@ class BooksSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('books')->insert([
+        // TODO: In case of using raw DB inserts:
+        // DB::table('books')->insert([
+        //     'name' => 'diywdisydtgsdiygsdiysdgf',
+        //     'author' => 'JKdo8yddoyd 2',
+        //     'publish_date' => '1999/2/9'
+        // ]);
+        Books::create([
             'name' => 'diywdisydtgsdiygsdiysdgf',
             'author' => 'JKdo8yddoyd 2',
             'publish_date' => '1999/2/9'
