@@ -1,6 +1,9 @@
 # Commands
 
 ```sh
+#  Start containers
+$ docker-compose up -d
+# Builds first before starting containers
 $ docker-compose up -d --build
 $ docker compose exec app bash
 $ docker-compose exec db bash

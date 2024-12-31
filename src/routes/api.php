@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
-use App\Http\Controllers\RankingPostController;
+use App\Http\Controllers\RankInfoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/books', [BookController::class, 'index']);
-Route::get('/ranking-post', [RankingPostController::class, 'index']);
+Route::get('/ranking-post/{rank_id}', [RankInfoController::class, 'index']);
