@@ -24,6 +24,6 @@ $ php artisan db:seed
 # To redo a migration with a db that already exists
 $ php artisan migrate:refresh
 $ php artisan migrate:refresh --seed
-
-$ 
+$ php artisan make:test ApiBlogControllerTest
+$ php artisan test
 ```
